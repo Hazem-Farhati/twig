@@ -1,0 +1,81 @@
+{% extends "admintemplate.html" %} {% block editUser %}
+
+
+<div class="container mt-5">
+  <h1 class="text-center">Edit User</h1>
+
+  <form method="post" action="index.php?action=EditusersPost">
+    <input type="hidden" name="id" value="{{r.user_id}}" />
+    <div class="mb-3">
+      <label for="firstname" class="form-label">firstname</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstname"
+        value="{{r.firstname}}"
+        name="firstname"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="lastname" class="form-label">lastname</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastname"
+        y
+        value="{{r.lastname}}"
+        name="lastname"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">email </label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        value="{{r.email}}"
+        name="email"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">password </label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        value="{{r.password}}"
+        name="password"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="dob" class="form-label">dob</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dob"
+        value="{{r.dob}}"
+        name="dob"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="user_type" class="form-label">user_type</label>
+      <input
+        type="text"
+        class="form-control"
+        id="user_type"
+        value="{{r.user_type}}"
+        name="user_type"
+      />
+    </div>
+    <button type="submit" name="submit" class="btn btn-success btn-block">
+      Save Changes
+    </button>
+    <a href="users.php" class="btn btn-primary">Back to List</a>
+  </form>
+</div>
+
+<br />
+{% endblock %}

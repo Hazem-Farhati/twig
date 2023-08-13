@@ -1,0 +1,107 @@
+{% extends "admintemplate.html" %} {% block editvacationadmin %}
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+
+<style></style>
+<div class="container mt-5">
+  <h1 class="text-center">Edit Conge</h1>
+  <form method="post" action="index.php?action=EditVacationsPost">
+    <input 
+      style="display:none"
+    
+    type="text" name="id" value="{{r.vacation_id}}" />
+    <div class="mb-3">
+      <label for="first_date" class="form-label"
+        >First Day :{{r.first_date}}</label
+      >
+      <input
+      style="display:none"
+        class="form-control cursor-na"
+        id="ld"
+        type="text"
+        value="{{r.first_date}}"
+        aria-describedby="lastnameHelp"
+        name="first_date"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="last_date" class="form-label"
+        >Last Day : {{r.last_date}}</label
+      >
+      <input
+      style="display:none"
+        type="text"
+        class="form-control"
+        id="ld"
+        value="{{r.last_date}}"
+        aria-describedby="lastnameHelp"
+        name="last_date"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label"
+        >description :{{r.description}}</label
+      >
+      <input
+      style="display:none"
+
+        type="text"
+        class="form-control"
+        id="description"
+        value="{{r.description}}"
+        aria-describedby="lastnameHelp"
+        name="description"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="speciality" class="form-label"></label>
+      <select
+        style="display: none"
+        type="text"
+        class="form-control"
+        id="vt_id"
+        name="vt_id"
+      >
+        <option type="select" value=""></option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="answer" class="form-label">answer</label>
+      <textarea
+        type="text"
+        class="form-control"
+        id="answer"
+        value=""
+        aria-describedby="lastnameHelp"
+        name="answer"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      name="submitVacationUpdate"
+      class="btn btn-success btn-block"
+    >
+      Save Changes
+    </button>
+    <a href="admin_home.php" class="btn btn-primary">Back to List</a>
+  </form>
+</div>
+
+<br />
+{% endblock %}

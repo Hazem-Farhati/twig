@@ -1,0 +1,29 @@
+{% extends "usertemplate.html" %} {% block home %}
+   <form action="index.php?action=insert_vacation" method="post">
+<div class="form-group">
+    <!--
+        <div class="form-outline mb-4">
+    <input type="hidden" class="form-control" id="user_id" name="user_id" value="<?php echo $u['user_id']?>" />
+  </div>
+-->
+         
+
+ <div class="mb-3">
+    <label for="sd" class="form-label text-success">starting date</label>
+    <input name="first_date" type="text" class="form-control " id="sd" value="mm/dd/yyyy"    >
+   </div>
+    <div class="mb-3">
+    <label for="ed" class="form-label text-danger">Ending date</label>
+    <input  name="last_date" type="text" class="form-control" id="ed" value="mm/dd/yyyy"  >
+  </div>
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+        <label class="form-label" for="form4Example3">Description</label>
+    <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+  </div>
+
+
+  <!-- Submit button -->
+  <button  onclick="return confirm('Are you sure you want to submit?');" type="submit" name="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+</form>
+{% endblock %}

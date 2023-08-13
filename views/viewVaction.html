@@ -1,0 +1,54 @@
+      
+      
+      
+      
+      {% extends "usertemplate.html" %} {% block ProfilVaction %}
+
+      <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <table class="table caption-top">
+                <thead>
+                  <tr>
+                    <th scope="col">First day</th>
+                    <th scope="col">Last day</th>
+                    <th scope="col">description</th>
+                    <th scope="col">type</th>
+                    <th scope="col">answer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ rt.first_date }}</td>
+                    <td>{{ vacation.last_date }}</td>
+                    <td>{{ vacation.description }}</td>
+                    <td>{{ vacation.user_type }}</td>
+                    <td>{{ vacation.answer }}</td>
+                    <!-- Add more cells for other attributes -->
+                  </tr>
+
+                  <!--
+       <?php 
+while ($u = $vacation->fetch(PDO::FETCH_ASSOC)) {
+    if ($reslut['user_id'] == $u['user_id']) {
+        ?>
+        <tr> 
+            <td><?php echo $u['first_date']?></td>
+            <td><?php echo $u['last_date']?></td>
+            <td><?php echo $u['description']?></td>
+            <td><?php echo $u['name']?></td>
+            <td><?php echo $u['answer']?></td>
+         
+        </tr>
+        <?php
+    }
+}
+?>
+-->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {% endblock  %}

@@ -1,0 +1,21 @@
+{% extends "admintemplate.html" %} {% block viewOneUser %}
+
+
+<div class="card" style="width: 18rem;margin-top:20px">
+  <div class="card-body">
+ 
+
+    <h5 class="card-title"></h5>
+    <p href="#" class="card-text"> firstname    {{result.firstname}}</p>
+    <p href="#" class="card-text"> lastname    {{result.lastname}}</p>
+
+    <p href="#" class="card-text"> Email    {{result.email}}</p>
+    <p href="#" class="card-text">Date of birth {{result.dob}} </p>
+    <p href="#" class="card-text">User function  {{result.user_type}}</p>
+  
+  </div>
+</div>
+<br>
+            <a href="users.php" class="btn btn-primary">Back to List</a>
+          
+{% endblock %}
